@@ -4,6 +4,7 @@ import { Layout, notification, Icon } from 'antd';
 import SiderCustom from './components/SiderCustom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { receiveData } from './action';
 import './App.css';
 
 class App extends Component {
