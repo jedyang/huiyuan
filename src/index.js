@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducer';
 import './index.css';
-import App from './App';
+import './style/lib/animate.css'
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';

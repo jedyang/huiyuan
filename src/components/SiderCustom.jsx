@@ -72,7 +72,7 @@ class SiderCustom extends Component {
                     </Menu.Item>
                     <SubMenu
                         key="/app/ui"
-                        title={<span><Icon type="scan" /><span className="nav-text">UI</span></span>}
+                        title={<span><Icon type="scan" /><span className="nav-text">我的会员</span></span>}
                     >
 
                         <Menu.Item key="/app/ui/buttons"><Link to={'/app/ui/buttons'}>按钮</Link></Menu.Item>
@@ -86,44 +86,7 @@ class SiderCustom extends Component {
                         <Menu.Item key="/app/ui/drags"><Link to={'/app/ui/drags'}>拖拽</Link></Menu.Item>
                         <Menu.Item key="/app/ui/gallery"><Link to={'/app/ui/gallery'}>画廊</Link></Menu.Item>
                     </SubMenu>
-                    <SubMenu
-                        key="/app/animation"
-                        title={<span><Icon type="rocket" /><span className="nav-text">动画</span></span>}
-                    >
 
-                        <Menu.Item key="/app/animation/basicAnimations"><Link to={'/app/animation/basicAnimations'}>基础动画</Link></Menu.Item>
-                        <Menu.Item key="/app/animation/exampleAnimations"><Link to={'/app/animation/exampleAnimations'}>动画案例</Link></Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="/app/table"
-                        title={<span><Icon type="copy" /><span className="nav-text">表格</span></span>}
-                    >
-
-                        <Menu.Item key="/app/table/basicTable"><Link to={'/app/table/basicTable'}>基础表格</Link></Menu.Item>
-                        <Menu.Item key="/app/table/advancedTable"><Link to={'/app/table/advancedTable'}>高级表格</Link></Menu.Item>
-                        <Menu.Item key="/app/table/asynchronousTable"><Link to={'/app/table/asynchronousTable'}>异步表格</Link></Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="/app/form"
-                        title={<span><Icon type="edit" /><span className="nav-text">表单</span></span>}
-                    >
-
-                        <Menu.Item key="/app/basicForm"><Link to={'/app/form/basicForm'}>基础表单</Link></Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="/app/chart"
-                        title={<span><Icon type="area-chart" /><span className="nav-text">图表</span></span>}
-                    >
-                        <Menu.Item key="/app/chart/echarts"><Link to={'/app/chart/echarts'}>echarts</Link></Menu.Item>
-                        <Menu.Item key="/app/chart/recharts"><Link to={'/app/chart/recharts'}>recharts</Link></Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="sub4"
-                        title={<span><Icon type="switcher" /><span className="nav-text">页面</span></span>}
-                    >
-                        <Menu.Item key="/login"><Link to={'/login'}>登录</Link></Menu.Item>
-                        <Menu.Item key="/404"><Link to={'/404'}>404</Link></Menu.Item>
-                    </SubMenu>
                     <SubMenu
                         key="/app/auth"
                         title={<span><Icon type="safety" /><span className="nav-text">权限管理</span></span>}
