@@ -130,6 +130,7 @@ module.exports = {
                 // match the requirements. When no loader matches it will fall
                 // back to the "file" loader at the end of the loader list.
                 oneOf: [
+
                     // "url" loader works like "file" loader except that it embeds assets
                     // smaller than specified limit in bytes as data URLs to avoid requests.
                     // A missing `test` is equivalent to a match.
@@ -154,6 +155,40 @@ module.exports = {
                             cacheDirectory: true,
                         },
                     },
+
+                    // Parse less files and modify variables
+                    {
+                        test: /\.less$/,
+                        use: [
+                            require.resolve('style-loader'),
+                            require.resolve('css-loader'),
+                            {
+                                loader: require.resolve('postcss-loader'),
+                                options: {
+                                    ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
+                                    plugins: () => [
+                                        require('postcss-flexbugs-fixes'),
+                                        autoprefixer({
+                                            browsers: [
+                                                '>1%',
+                                                'last 4 versions',
+                                                'Firefox ESR',
+                                                'not ie < 9', // React doesn't support IE8 anyway
+                                            ],
+                                            flexbox: 'no-2009',
+                                        }),
+                                    ],
+                                },
+                            },
+                            {
+                                loader: require.resolve('less-loader'),
+                                options: {
+                                    modifyVars: {"@primary-color": "#001529"},
+                                },
+                            },
+                        ],
+                    },
+
                     // "postcss" loader applies autoprefixer to our CSS.
                     // "css" loader resolves paths in CSS and adds assets as dependencies.
                     // "style" loader turns CSS into JS modules that inject <style> tags.
